@@ -15,7 +15,7 @@ export default (env: EnvVariables) => {
 
     const config: webpack.Configuration = {
         mode: env.mode ?? 'development',
-        entry: path.resolve(__dirname, 'src', 'index.ts'),
+        entry: path.resolve(__dirname, 'src', 'index.tsx'),
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: '[name].[contenthash].js',
@@ -40,7 +40,7 @@ export default (env: EnvVariables) => {
         devtool: isDev ? 'inline-source-map' : false,
         devServer: isDev
             ? {
-                  port: env.port ?? 5556,
+                  port: env.port ?? 5558,
                   open: true,
               }
             : undefined,
