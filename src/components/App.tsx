@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import './App.scss';
+import classes from './App.module.scss';
 
 export default function App() {
     const [count, setCount] = useState(0);
     return (
         <>
-            <div>{count}</div>
-            <button onClick={() => setCount((prev) => prev + 1)}>Add</button>
+            <div className={classes.value}>{count}</div>
+            <button className={classes.button} onClick={() => setCount((prev) => prev + 1)}>
+                Add
+            </button>
         </>
     );
 }
