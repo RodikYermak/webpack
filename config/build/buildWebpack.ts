@@ -10,9 +10,9 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
 
     return {
         mode: options.mode ?? 'development',
-        entry: options.path.entry,
+        entry: options.paths.entry,
         output: {
-            path: options.path.output,
+            path: options.paths.output,
             filename: '[name].[contenthash].js',
             clean: true,
         },
@@ -25,5 +25,3 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
         devServer: isDev ? buildDevServer(options) : undefined,
     };
 }
-// 56:25
-// dd

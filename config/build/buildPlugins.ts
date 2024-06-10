@@ -4,12 +4,12 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
 
-export function buildPlugins(options: BuildOptions): Configuration['plugins'] {
-    const isDev = options.mode === 'development';
-    const isProd = options.mode === 'production';
+export function buildPlugins({ mode, paths }: BuildOptions): Configuration['plugins'] {
+    const isDev = mode === 'development';
+    const isProd = mode === 'production';
 
     const plugins: Configuration['plugins'] = [
-        new HtmlWebpackPlugin({ template: options.path.html }),
+        new HtmlWebpackPlugin({ template: paths.html }),
     ];
 
     if (isDev) {
