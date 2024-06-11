@@ -14,17 +14,17 @@ function TODO() {
 export default function App() {
     const [count, setCount] = useState(0);
 
-    if (__PLATFORM__ === 'desktop') {
-        return <div>ISDESKTOPPLATFORM</div>;
-    }
+    // if (__PLATFORM__ === 'desktop') {
+    //     return <div>ISDESKTOPPLATFORM</div>;
+    // }
 
-    if (__PLATFORM__ === 'mobile') {
-        return <div>ISMOBILEPPLATFORM</div>;
-    }
+    // if (__PLATFORM__ === 'mobile') {
+    //     return <div>ISMOBILEPPLATFORM</div>;
+    // }
 
-    if (__ENV__ === 'development') {
-        // addDevTools();
-    }
+    // if (__ENV__ === 'development') {
+    //     // addDevTools();
+    // }
 
     return (
         <>
@@ -36,7 +36,7 @@ export default function App() {
             <div>
                 <CalendarSvg width={50} height={50} />
             </div>
-            <Link to="/about">About</Link>
+            <Link to="/about">AboutZzzz</Link>
             <br />
             <Link to="/shop">Shop</Link>
             <div className={classes.value}>{count}</div>
