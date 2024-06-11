@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classes from './App.module.scss';
 import { Outlet, Link } from 'react-router-dom';
+import About from '@/pages/about/About';
 
 export default function App() {
     const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ export default function App() {
             <button className={classes.button} onClick={() => setCount((prev) => prev + 1)}>
                 Add
             </button>
+            <About />
             <Outlet />
         </>
     );
