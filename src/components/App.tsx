@@ -6,10 +6,29 @@ import avatarPng from '@/assets/avatar.png';
 import avatarJpg from '@/assets/avatar.jpg';
 import CalendarSvg from '@/assets/calendar.svg';
 
+// tree shaking
+function TODO() {
+    console.log('TODOFUNCTION');
+}
+
 export default function App() {
     const [count, setCount] = useState(0);
+
+    if (__PLATFORM__ === 'desktop') {
+        return <div>ISDESKTOPPLATFORM</div>;
+    }
+
+    if (__PLATFORM__ === 'mobile') {
+        return <div>ISMOBILEPPLATFORM</div>;
+    }
+
+    if (__ENV__ === 'development') {
+        // addDevTools();
+    }
+
     return (
         <>
+            <h1>PLATFORM={__PLATFORM__}</h1>
             <div>
                 <img width={100} height={100} src={avatarPng} alt="avatar" />
                 <img width={100} height={100} src={avatarJpg} alt="avatar" />
