@@ -27,8 +27,8 @@ export default function App() {
     // }
 
     return (
-        <>
-            <h1>PLATFORM={__PLATFORM__}</h1>
+        <div data-testid={'App.DataTestId'}>
+            <h1 data-testid={'Platform'}>PLATFORM={__PLATFORM__}</h1>
             <div>
                 <img width={100} height={100} src={avatarPng} alt="avatar" />
                 <img width={100} height={100} src={avatarJpg} alt="avatar" />
@@ -45,6 +45,6 @@ export default function App() {
             </button>
             <About />
             <Outlet />
-        </>
+        </div>
     );
 }
